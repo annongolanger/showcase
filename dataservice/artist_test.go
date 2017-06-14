@@ -1,129 +1,76 @@
 package dataservice_test
 
 import (
-	"github.com/benwaine/artiste/dataservice"
+	. "github.com/benwaine/artiste/dataservice"
+
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/benwaine/artiste/dataservice/config"
 	"github.com/go-kit/kit/endpoint"
 	"github.com/benwaine/artiste/dataservice/dataservicefakes"
-	"errors"
+	"net/http"
+	"bytes"
 )
 
-var _ = Describe("ArtistService", func() {
+var _ = Describe("Artist", func() {
 
-	Describe("The GetSubscribedArtists Method", func() {
+	Describe("The Endpoint", func() {
 
-		var artistService dataservice.ArtistService
+		var endpoint endpoint.Endpoint
+		var response interface{}
+		var request GetArtistRequest
+		var err error
 
-		Context("There are configured artists", func() {
+		BeforeEach(func() {
+			endpoint = MakeGetArtistEndpoint()
+			request = GetArtistRequest{}
+			ctx := dataservicefakes.FakeContext{}
+			response, err = endpoint(&ctx, request)
+		})
 
-			config := config.ArtisteConfig{
-				SupportedArtists: []config.ArtistConfig{
-					{
-						Name: "Foo Fighters",
-					},
-					{
-						Name: "SlipKnot",
-					},
-				},
-			}
+		It("should not error", func() {
+			Expect(err).NotTo(HaveOccurred())
+		})
+	})
 
-			artistService = dataservice.ArtistService{
-				Config: config,
-			}
+	Describe("The HTTP Request Decoder", func() {
 
-			artists, err := artistService.GetSupportedArtists()
+		var request *http.Request
+		var parsedRequest interface{}
+		var err error
+
+		Context("valid JSON is submitted", func() {
+
+			BeforeEach(func() {
+				reader := bytes.NewReader([]byte(`{ "name": "Jimmy Eat World" }`))
+				request, _ = http.NewRequest("POST", "/GetArtist", reader)
+				ctx := dataservicefakes.FakeContext{}
+				parsedRequest, err = DecodeGetArtistRequest(&ctx, request)
+			})
 
 			It("should not error", func() {
 				Expect(err).NotTo(HaveOccurred())
 			})
 
-			It("should return 2 artists", func() {
-				Expect(artists).To(HaveLen(2))
-			})
+			It("should parse the request into a GetArtistRequest", func() {
+				getArtistRequest, success := parsedRequest.(GetArtistRequest)
 
-			It("should return an artist list with the correct artists", func() {
-				Expect(artists[0].Name).To(Equal("Foo Fighters"))
-				Expect(artists[1].Name).To(Equal("SlipKnot"))
+				Expect(success).To(BeTrue())
+				Expect(getArtistRequest.Name).To(Equal("Jimmy Eat World"))
 			})
-
 		})
 
-		Context("There are noconfigured artists", func() {
+		Context("invalid JSON is submitted", func() {
 
-			config := config.ArtisteConfig{
-				SupportedArtists: []config.ArtistConfig{
-				},
-			}
-
-			artistService = dataservice.ArtistService{
-				Config: config,
-			}
-
-			_, err := artistService.GetSupportedArtists()
+			BeforeEach(func() {
+				reader := bytes.NewReader([]byte(`{ "na`))
+				request, _ = http.NewRequest("POST", "/GetArtist", reader)
+				ctx := dataservicefakes.FakeContext{}
+				parsedRequest, err = DecodeGetArtistRequest(&ctx, request)
+			})
 
 			It("should error", func() {
 				Expect(err).To(HaveOccurred())
-				Expect(err).To(Equal(dataservice.ErrNoConfiguredArtists))
-			})
-		})
-
-	})
-
-})
-
-var _ = Describe("Artist Endpoint", func() {
-
-	Describe("GetSupportedArtistsEndpoint", func() {
-
-		var getSupportedArtistsEndpoint endpoint.Endpoint
-		var service dataservicefakes.FakeGetSupportedArtists
-		var ctx dataservicefakes.FakeContext
-		var response interface{}
-		var err error
-
-		BeforeEach(func() {
-			service = dataservicefakes.FakeGetSupportedArtists{}
-			ctx = dataservicefakes.FakeContext{}
-			getSupportedArtistsEndpoint = dataservice.MakeGetSupportedArtistsEndpoint(&service)
-		})
-
-		Describe("The endpoint", func() {
-
-			Context("When artists are returned with no error", func() {
-
-				BeforeEach(func() {
-					artists := []dataservice.Artist{{Name: "Test Test", }}
-					service.GetSupportedArtistsReturns(artists, nil)
-					response, err = getSupportedArtistsEndpoint(&ctx, nil)
-				})
-
-				It("should call GetSupportedArtists", func() {
-					Expect(service.GetSupportedArtistsCallCount()).To(Equal(1))
-				})
-
-				It("should not error", func() {
-					Expect(err).ShouldNot(HaveOccurred())
-				})
-
-				It("should return a response containing the correct artists", func() {
-					resp := response.(dataservice.GetSupportedArtistsResponse)
-					Expect(resp.Artists[0].Name).To(Equal("Test Test"))
-				})
-			})
-
-			Context("An Error is returned", func() {
-
-				BeforeEach(func() {
-					service.GetSupportedArtistsReturns([]dataservice.Artist{}, errors.New("Test Error"))
-					response, err = getSupportedArtistsEndpoint(&ctx, nil)
-				})
-
-				It("should return the error", func() {
-					Expect(err).To(HaveOccurred())
-					Expect(err.Error()).To(Equal("Test Error"))
-				})
+				Expect(err).To(Equal(ErrInvalidJSON))
 			})
 		})
 	})

@@ -77,4 +77,37 @@ var _ = Describe("Artiste", func() {
 			Expect(parsedResp.Artists[2].Name).To(Equal("New Found Glory"))
 		})
 	})
+
+	Describe("The /GetArtist method", func() {
+
+		var response *http.Response
+		var body string
+		var err error
+		var respBytes []byte
+
+		BeforeEach(func() {
+
+			bodyBytes := []byte(`{ "artist": "Jimmy Eat World" }`)
+			bodyReader := bytes.NewReader(bodyBytes)
+
+			response, err = http.Post("http://localhost:8082/GetArtist", "application/json", bodyReader)
+
+			if err != nil {
+				Fail("Unable to fetch artists resource")
+			}
+
+			respBytes, err = ioutil.ReadAll(response.Body)
+
+			if err != nil {
+				Fail("Error parsing /GetSupportedArtistsgo response body")
+			}
+
+			body = string(respBytes)
+		})
+
+		It("should return 200 OK", func() {
+			Expect(response.StatusCode).To(Equal(http.StatusOK))
+		})
+
+	})
 })

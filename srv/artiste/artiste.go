@@ -41,6 +41,14 @@ func main() {
 
 	http.Handle("/GetSupportedArtists", getAllArtistsHandler)
 
+	getArtistHandler := httptransport.NewServer(
+		dataservice.MakeGetArtistEndpoint(),
+		dataservice.DecodeGetArtistRequest,
+		encodeResponse,
+	)
+
+	http.Handle("/GetArtist", getArtistHandler)
+
 	http.ListenAndServe(":8082", nil)
 
 }
