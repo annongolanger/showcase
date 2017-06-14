@@ -1,0 +1,5 @@
+  artiste:
+    container_name: artiste
+    build: ./artiste
+    ports:
+      - "8082:8082"

@@ -3,7 +3,7 @@ package dataservice
 import (
 	"github.com/go-kit/kit/endpoint"
 	"context"
-	"github.com/benwaine/artiste/dataservice/config"
+	"github.com/benwaine/artistprof/artiste/dataservice/config"
 	"errors"
 )
 

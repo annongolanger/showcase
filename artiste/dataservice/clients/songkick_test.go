@@ -1,7 +1,7 @@
 package clients_test
 
 import (
-	. "github.com/benwaine/artiste/dataservice/clients"
+	. "github.com/benwaine/artistprof/artiste/dataservice/clients"
 
 	. "github.com/onsi/ginkgo"
 	"gopkg.in/jarcoal/httpmock.v1"

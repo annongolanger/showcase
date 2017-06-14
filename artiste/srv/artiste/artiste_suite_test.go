@@ -13,7 +13,7 @@ func TestArtiste(t *testing.T) {
 	RegisterFailHandler(Fail)
 
 	var artisteProc *gexec.Session
-	var pathToSelf = "github.com/benwaine/artiste/srv/artiste"
+	var pathToSelf = "github.com/benwaine/artistprof/artiste/srv/artiste"
 
 	BeforeSuite(func() {
 		pathToServer, err := gexec.Build(pathToSelf)

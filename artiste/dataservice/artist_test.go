@@ -1,12 +1,12 @@
 package dataservice_test
 
 import (
-	. "github.com/benwaine/artiste/dataservice"
+	. "github.com/benwaine/artistprof/artiste/dataservice"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/go-kit/kit/endpoint"
-	"github.com/benwaine/artiste/dataservice/dataservicefakes"
+	"github.com/benwaine/artistprof/artiste/dataservice/dataservicefakes"
 	"net/http"
 	"bytes"
 )

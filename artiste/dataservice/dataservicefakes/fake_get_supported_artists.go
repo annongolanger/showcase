@@ -4,7 +4,7 @@ package dataservicefakes
 import (
 	"sync"
 
-	"github.com/benwaine/artiste/dataservice"
+	"github.com/benwaine/artistprof/artiste/dataservice"
 )
 
 type FakeGetSupportedArtists struct {
