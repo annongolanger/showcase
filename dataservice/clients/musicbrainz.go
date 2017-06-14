@@ -24,12 +24,16 @@ func(mc *MusicbrainzClient) GetArtist(artistId string) (MusicBrainsGetArtistResp
 	}
 
 	if resp.StatusCode != 200 {
-		return MusicBrainsGetArtistResponse{}, errors.New(fmt.Sprintf("Response Error: %s", resp.StatusCode))
+		return MusicBrainsGetArtistResponse{}, errors.New(fmt.Sprintf("Request Error: %s", resp.StatusCode))
 	}
 
 	var artistResponse MusicBrainsGetArtistResponse
 
 	err = json.NewDecoder(resp.Body).Decode(&artistResponse)
+
+	if err != nil {
+		return MusicBrainsGetArtistResponse{}, errors.New(fmt.Sprintf("Parse Error: %s", err.Error()))
+	}
 
 	return artistResponse, nil
 }
