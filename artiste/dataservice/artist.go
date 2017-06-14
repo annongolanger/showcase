@@ -7,7 +7,7 @@ import (
 	"github.com/benwaine/artistprof/artiste/dataservice/clients"
 	"github.com/go-kit/kit/endpoint"
 	"net/http"
-	"log"
+	"sync"
 )
 
 var ErrInvalidJSON = errors.New("Invalid Request JSON")
@@ -44,21 +44,46 @@ func (s *GetArtistService) GetArtistData(name string) (Artist, error) {
 		return Artist{}, ErrArtistNotSupported
 	}
 
-	// Call the Artist Performance Getter
-	artist, err := s.ArtistGetter.GetArtist(id)
+	var requestErr error
+	var wg sync.WaitGroup
+	var artistResp clients.Artist
+	var performances []clients.PerformanceEvent
 
-	if err != nil {
-		return Artist{}, ErrArtistUnavailable
-	}
+	wg.Add(2)
 
-	performances, err := s.PerformanceGetter.GetArtistPerformances(id)
-	log.Printf("Pers")
-	if err != nil {
+	go func(artistId string) {
+		defer wg.Done()
+
+		resp, err := s.ArtistGetter.GetArtist(id)
+
+		if err != nil && requestErr == nil {
+			requestErr = err
+			return
+		}
+
+		artistResp = resp
+	}(id)
+
+	go func(artistId string) {
+		defer wg.Done()
+		resp, err := s.PerformanceGetter.GetArtistPerformances(id)
+
+		if err != nil && requestErr == nil {
+			requestErr = err
+			return
+		}
+
+		performances = resp
+	}(id)
+
+	wg.Wait()
+
+	if requestErr != nil {
 		return Artist{}, ErrArtistUnavailable
 	}
 
 	artistResponse := Artist{
-		Name:         artist.Name,
+		Name:         artistResp.Name,
 		Performances: make([]ArtistPerformance, len(performances)),
 	}
 
@@ -67,8 +92,6 @@ func (s *GetArtistService) GetArtistData(name string) (Artist, error) {
 	}
 
 	return artistResponse, nil
-
-	// $$
 
 }
 
