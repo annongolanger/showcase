@@ -9,6 +9,7 @@ import (
 	"github.com/benwaine/artistprof/artiste/dataservice/config"
 	httptransport "github.com/go-kit/kit/transport/http"
 	"net/http"
+	"github.com/benwaine/artistprof/artiste/dataservice/clients"
 )
 
 var configLocation string
@@ -28,20 +29,26 @@ func main() {
 		fmt.Fprint(w, "OK")
 	})
 
-	svc := dataservice.SupportedArtistsService{
+	svcSupportedArtists := dataservice.SupportedArtistsService{
 		Config: config,
 	}
 
 	getAllArtistsHandler := httptransport.NewServer(
-		dataservice.MakeGetSupportedArtistsEndpoint(svc),
+		dataservice.MakeGetSupportedArtistsEndpoint(svcSupportedArtists),
 		decodeEmptyBody,
 		encodeResponse,
 	)
 
 	http.Handle("/GetSupportedArtists", getAllArtistsHandler)
 
+	svcGetArtist := &dataservice.GetArtistService{
+		ArtistGetter: clients.NewMusicBrainzClient(config.MusicBrainzBaseUrl),
+		PerformanceGetter: clients.NewSongKickClient(config.SongKickBaseUrl),
+		Config: config,
+	}
+	
 	getArtistHandler := httptransport.NewServer(
-		dataservice.MakeGetArtistEndpoint(),
+		dataservice.MakeGetArtistEndpoint(svcGetArtist),
 		dataservice.DecodeGetArtistRequest,
 		encodeResponse,
 	)

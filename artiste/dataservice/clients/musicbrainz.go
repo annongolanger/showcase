@@ -9,15 +9,22 @@ import (
 
 type MusicbrainzClient struct {
 	Client http.Client
+	BaseUrl string
 }
 
 type Artist struct {
 	Name string `json:"name"`
 }
 
+func NewMusicBrainzClient(baseUrl string) *MusicbrainzClient {
+	return &MusicbrainzClient{
+		BaseUrl:baseUrl,
+	}
+}
+
 func (mc *MusicbrainzClient) GetArtist(artistId string) (Artist, error) {
 
-	resp, err := mc.Client.Get(fmt.Sprintf("http://musicbrainz.org/ws/2/artist/%s?inc=aliases+releases&fmt=json", artistId))
+	resp, err := mc.Client.Get(fmt.Sprintf("%s/ws/2/artist/%s?inc=aliases+releases&fmt=json", mc.BaseUrl, artistId))
 
 	if err != nil {
 		return Artist{}, err

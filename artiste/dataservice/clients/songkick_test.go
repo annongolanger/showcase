@@ -12,10 +12,14 @@ var _ = Describe("Songkick", func() {
 
 	Describe("GetArtistPerformances", func() {
 
-		var client SongKickClient
+		var client *SongKickClient
 		var response []PerformanceEvent
 		var err error
 		var artistId = "5b11f4ce-a62d-471e-81fc-a69a8278c7da"
+
+		BeforeEach(func() {
+			client = NewSongKickClient("http://testurl.com")
+		})
 
 		Context("The response is a success", func() {
 
@@ -82,10 +86,9 @@ var _ = Describe("Songkick", func() {
 
 				httpmock.RegisterResponder(
 					"GET",
-					"http://api.songkick.com/api/3.0/artists/mbid:5b11f4ce-a62d-471e-81fc-a69a8278c7da/calendar.json",
+					"http://testurl.com/api/3.0/artists/mbid:5b11f4ce-a62d-471e-81fc-a69a8278c7da/calendar.json",
 					httpmock.NewStringResponder(200, mockResponse))
 
-				client = SongKickClient{}
 				response, err = client.GetArtistPerformances(artistId)
 			})
 
@@ -107,10 +110,9 @@ var _ = Describe("Songkick", func() {
 
 				httpmock.RegisterResponder(
 					"GET",
-					"http://api.songkick.com/api/3.0/artists/mbid:5b11f4ce-a62d-471e-81fc-a69a8278c7da/calendar.json",
+					"http://testurl.com/api/3.0/artists/mbid:5b11f4ce-a62d-471e-81fc-a69a8278c7da/calendar.json",
 					httpmock.NewStringResponder(401, mockResponse))
 
-				client = SongKickClient{}
 				response, err = client.GetArtistPerformances(artistId)
 			})
 
@@ -128,10 +130,9 @@ var _ = Describe("Songkick", func() {
 
 				httpmock.RegisterResponder(
 					"GET",
-					"http://api.songkick.com/api/3.0/artists/mbid:5b11f4ce-a62d-471e-81fc-a69a8278c7da/calendar.json",
+					"http://testurl.com/api/3.0/artists/mbid:5b11f4ce-a62d-471e-81fc-a69a8278c7da/calendar.json",
 					httpmock.NewStringResponder(200, mockResponse))
 
-				client = SongKickClient{}
 				response, err = client.GetArtistPerformances(artistId)
 			})
 

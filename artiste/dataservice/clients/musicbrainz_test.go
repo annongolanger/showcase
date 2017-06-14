@@ -12,7 +12,7 @@ var _ = Describe("Musicbrainz", func() {
 	var client *MusicbrainzClient
 
 	BeforeEach(func() {
-		client = &MusicbrainzClient{}
+		client = NewMusicBrainzClient("http://testurl.com")
 	})
 
 	Describe("GetArtist", func() {
@@ -114,7 +114,7 @@ var _ = Describe("Musicbrainz", func() {
 
 				httpmock.RegisterResponder(
 					"GET",
-					"http://musicbrainz.org/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?inc=aliases+releases&fmt=json",
+					"http://testurl.com/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?inc=aliases+releases&fmt=json",
 					httpmock.NewStringResponder(200, mockResponse))
 
 				resp, err = client.GetArtist("5b11f4ce-a62d-471e-81fc-a69a8278c7da")
@@ -137,7 +137,7 @@ var _ = Describe("Musicbrainz", func() {
 
 				httpmock.RegisterResponder(
 					"GET",
-					"http://musicbrainz.org/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?inc=aliases+releases&fmt=json",
+					"http://testurl.com/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?inc=aliases+releases&fmt=json",
 					httpmock.NewStringResponder(503, mockResponse))
 
 				resp, err = client.GetArtist("5b11f4ce-a62d-471e-81fc-a69a8278c7da")
@@ -157,7 +157,7 @@ var _ = Describe("Musicbrainz", func() {
 
 				httpmock.RegisterResponder(
 					"GET",
-					"http://musicbrainz.org/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?inc=aliases+releases&fmt=json",
+					"http://testurl.com/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?inc=aliases+releases&fmt=json",
 					httpmock.NewStringResponder(200, mockResponse))
 
 				resp, err = client.GetArtist("5b11f4ce-a62d-471e-81fc-a69a8278c7da")

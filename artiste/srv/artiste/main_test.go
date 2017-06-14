@@ -87,7 +87,7 @@ var _ = Describe("Artiste", func() {
 
 		BeforeEach(func() {
 
-			bodyBytes := []byte(`{ "artist": "Jimmy Eat World" }`)
+			bodyBytes := []byte(`{ "name": "Jimmy Eat World" }`)
 			bodyReader := bytes.NewReader(bodyBytes)
 
 			response, err = http.Post("http://localhost:8082/GetArtist", "application/json", bodyReader)
@@ -99,14 +99,14 @@ var _ = Describe("Artiste", func() {
 			respBytes, err = ioutil.ReadAll(response.Body)
 
 			if err != nil {
-				Fail("Error parsing /GetSupportedArtistsgo response body")
+				Fail("Error parsing /GetSupportedArtists response body")
 			}
 
 			body = string(respBytes)
 		})
 
 		It("should return 200 OK", func() {
-			Expect(response.StatusCode).To(Equal(http.StatusOK))
+			Expect(response.StatusCode).To(Equal(http.StatusOK), body)
 		})
 
 	})

@@ -19,7 +19,7 @@ type ArtisteConfig struct {
 	SongKickBaseUrl    string
 }
 
-func(ac ArtisteConfig) Supports(name string) (supported bool, id string) {
+func(ac ArtisteConfig) Supported(name string) (supported bool, id string) {
 
 	for i := range ac.SupportedArtists {
 		if ac.SupportedArtists[i].Name == name {

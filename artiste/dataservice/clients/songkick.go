@@ -9,6 +9,13 @@ import (
 
 type SongKickClient struct {
 	Client http.Client
+	BaseUrl string
+}
+
+func NewSongKickClient(baseUrl string) *SongKickClient {
+	return &SongKickClient{
+		BaseUrl: baseUrl,
+	}
 }
 
 type getPerformanceResponse struct {
@@ -33,7 +40,7 @@ type PerformanceEvent struct {
 
 func (sc SongKickClient) GetArtistPerformances(artistId string) ([]PerformanceEvent, error) {
 
-	response, err := sc.Client.Get(fmt.Sprintf("http://api.songkick.com/api/3.0/artists/mbid:%s/calendar.json", artistId))
+	response, err := sc.Client.Get(fmt.Sprintf("%s/api/3.0/artists/mbid:%s/calendar.json", sc.BaseUrl, artistId))
 
 	if err != nil {
 		return []PerformanceEvent{}, errors.New(fmt.Sprintf("Request Error: %s", err.Error()))

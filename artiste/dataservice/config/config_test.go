@@ -26,13 +26,13 @@ var _ = Describe("Config", func() {
 		})
 
 		It("Returns true and the artist id when an artist is present in config", func() {
-			supported, id := config.Supports("Mc Jagger")
+			supported, id := config.Supported("Mc Jagger")
 			Expect(supported).To(BeTrue())
 			Expect(id).To(Equal("12345"))
 		})
 
 		It("Returns false when an artist is no present in config", func() {
-			supported, id := config.Supports("No Doubt")
+			supported, id := config.Supported("No Doubt")
 			Expect(supported).To(BeFalse())
 			Expect(id).To(BeEmpty())
 		})
