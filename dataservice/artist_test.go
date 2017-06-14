@@ -7,6 +7,7 @@ import (
 	"github.com/benwaine/artiste/dataservice/config"
 	"github.com/go-kit/kit/endpoint"
 	"github.com/benwaine/artiste/dataservice/dataservicefakes"
+	"errors"
 )
 
 var _ = Describe("ArtistService", func() {
@@ -82,32 +83,48 @@ var _ = Describe("Artist Endpoint", func() {
 		var response interface{}
 		var err error
 
-		getSupportedArtistsEndpoint = dataservice.MakeGetSupportedArtistsEndpoint(&service)
-
-		Context("Artists are returned with no error", func() {
-
-			service.GetSupportedArtistsReturns([]dataservice.Artist{
-				{
-					Name: "Test Test",
-				},
-			}, nil)
-
-			response, err = getSupportedArtistsEndpoint(&ctx, nil)
-
-			It("should call GetSupportedArtists", func() {
-				Expect(service.GetSupportedArtistsCallCount()).To(Equal(1))
-			})
-
-			It("should not error", func() {
-				Expect(err).ShouldNot(HaveOccurred())
-			})
-
-			It("should return a response containing the correct artists", func() {
-				resp := response.(dataservice.GetSupportedArtistsResponse)
-				Expect(resp.Artists[0].Name).To(Equal("Test Test"))
-			})
+		BeforeEach(func() {
+			service = dataservicefakes.FakeGetSupportedArtists{}
+			ctx = dataservicefakes.FakeContext{}
+			getSupportedArtistsEndpoint = dataservice.MakeGetSupportedArtistsEndpoint(&service)
 		})
 
-	})
+		Describe("The endpoint", func() {
 
+			Context("When artists are returned with no error", func() {
+
+				BeforeEach(func() {
+					artists := []dataservice.Artist{{Name: "Test Test", }}
+					service.GetSupportedArtistsReturns(artists, nil)
+					response, err = getSupportedArtistsEndpoint(&ctx, nil)
+				})
+
+				It("should call GetSupportedArtists", func() {
+					Expect(service.GetSupportedArtistsCallCount()).To(Equal(1))
+				})
+
+				It("should not error", func() {
+					Expect(err).ShouldNot(HaveOccurred())
+				})
+
+				It("should return a response containing the correct artists", func() {
+					resp := response.(dataservice.GetSupportedArtistsResponse)
+					Expect(resp.Artists[0].Name).To(Equal("Test Test"))
+				})
+			})
+
+			Context("An Error is returned", func() {
+
+				BeforeEach(func() {
+					service.GetSupportedArtistsReturns([]dataservice.Artist{}, errors.New("Test Error"))
+					response, err = getSupportedArtistsEndpoint(&ctx, nil)
+				})
+
+				It("should return the error", func() {
+					Expect(err).To(HaveOccurred())
+					Expect(err.Error()).To(Equal("Test Error"))
+				})
+			})
+		})
+	})
 })

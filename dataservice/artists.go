@@ -53,7 +53,7 @@ func MakeGetSupportedArtistsEndpoint(svc GetSupportedArtists) endpoint.Endpoint 
 		artists, err := svc.GetSupportedArtists()
 
 		if err != nil {
-			return GetSupportedArtistsResponse{[]Artist{}, err.Error()}, nil
+			return GetSupportedArtistsResponse{[]Artist{}, err.Error()}, err
 		}
 
 		return GetSupportedArtistsResponse{artists, ""}, nil
