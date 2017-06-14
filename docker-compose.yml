@@ -1,5 +1,15 @@
+version: '2'
+
+services:
   artiste:
     container_name: artiste
     build: ./artiste
+    links:
+     - "stubs"
     ports:
       - "8082:8082"
+  stubs:
+    container_name: stubs
+    build: ./httpstubs
+    ports:
+      - "8008:8008"

@@ -1,10 +1,10 @@
 {
-  "MusicBrainzBaseUrl": "https://jsonblob.com/api",
-  "SongKickBaseUrl": "https://jsonblob.com/api",
+  "MusicBrainzBaseUrl": "http://192.168.99.100:8008/musicbrainz",
+  "SongKickBaseUrl": "http://192.168.99.100:8008/songkick",
   "SupportedArtists": [
     {
       "Name": "Jimmy Eat World",
-      "Id" : "12345"
+      "Id" : "bbc5b66b-d037-4f26-aecf-0b129e7f876a"
     },
     {
       "Name": "Nirvana",
