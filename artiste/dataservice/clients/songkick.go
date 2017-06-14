@@ -1,10 +1,10 @@
 package clients
 
 import (
-	"net/http"
-	"fmt"
 	"encoding/json"
 	"errors"
+	"fmt"
+	"net/http"
 )
 
 type SongKickClient struct {

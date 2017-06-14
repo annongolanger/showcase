@@ -1,18 +1,17 @@
 package main
 
 import (
-	"net/http"
-	"fmt"
-	"flag"
-	"github.com/benwaine/artistprof/artiste/dataservice/config"
-	"github.com/benwaine/artistprof/artiste/dataservice"
-	httptransport "github.com/go-kit/kit/transport/http"
 	"context"
 	"encoding/json"
+	"flag"
+	"fmt"
+	"github.com/benwaine/artistprof/artiste/dataservice"
+	"github.com/benwaine/artistprof/artiste/dataservice/config"
+	httptransport "github.com/go-kit/kit/transport/http"
+	"net/http"
 )
 
 var configLocation string
-
 
 func main() {
 
@@ -29,7 +28,7 @@ func main() {
 		fmt.Fprint(w, "OK")
 	})
 
-	svc := dataservice.ArtistService{
+	svc := dataservice.SupportedArtistsService{
 		Config: config,
 	}
 
@@ -53,7 +52,7 @@ func main() {
 
 }
 
-func encodeResponse(_ context.Context, w http.ResponseWriter, response interface{}) error  {
+func encodeResponse(_ context.Context, w http.ResponseWriter, response interface{}) error {
 	return json.NewEncoder(w).Encode(response)
 }
 

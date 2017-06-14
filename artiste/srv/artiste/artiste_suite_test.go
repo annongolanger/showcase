@@ -4,9 +4,9 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"testing"
 	"github.com/onsi/gomega/gexec"
 	"os/exec"
+	"testing"
 )
 
 func TestArtiste(t *testing.T) {

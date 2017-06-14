@@ -4,27 +4,25 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"testing"
 	"gopkg.in/jarcoal/httpmock.v1"
+	"testing"
 )
 
 func TestClients(t *testing.T) {
 
 	RegisterFailHandler(Fail)
 
-	BeforeSuite(func(){
+	BeforeSuite(func() {
 		httpmock.Activate()
 	})
 
-	BeforeEach(func(){
+	BeforeEach(func() {
 		httpmock.Reset()
 	})
 
-	AfterSuite(func(){
+	AfterSuite(func() {
 		httpmock.DeactivateAndReset()
 	})
 
 	RunSpecs(t, "Clients Suite")
 }
-
-

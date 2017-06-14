@@ -1,10 +1,10 @@
 package clients
 
 import (
-	"net/http"
-	"fmt"
 	"encoding/json"
 	"errors"
+	"fmt"
+	"net/http"
 )
 
 type SpotifyClient struct {
@@ -23,7 +23,7 @@ type relatedArtistArtistResponse struct {
 	Name string `json:"name"`
 }
 
-func(sc *SpotifyClient) GetRelatedArtists(artistId string) ([]SpotifyRelatedArtist, error)  {
+func (sc *SpotifyClient) GetRelatedArtists(artistId string) ([]SpotifyRelatedArtist, error) {
 
 	resp, err := sc.client.Get(fmt.Sprintf("https://api.spotify.com/v1/artists/%s/related-artists", artistId))
 
@@ -56,6 +56,3 @@ func(sc *SpotifyClient) GetRelatedArtists(artistId string) ([]SpotifyRelatedArti
 
 	return sportifyRelatedArtists, nil
 }
-
-
-

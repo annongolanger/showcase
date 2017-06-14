@@ -1,20 +1,33 @@
 package config
 
 import (
+	"bytes"
+	"encoding/json"
 	"errors"
 	"fmt"
-	"encoding/json"
 	"io/ioutil"
-	"bytes"
 )
 
 type ArtistConfig struct {
 	Name string
-	Mid string
+	Mid  string
 }
 
 type ArtisteConfig struct {
-	SupportedArtists []ArtistConfig
+	SupportedArtists   []ArtistConfig
+	MusicBrainzBaseUrl string
+	SongKickBaseUrl    string
+}
+
+func(ac ArtisteConfig) Supports(name string) (supported bool, id string) {
+
+	for i := range ac.SupportedArtists {
+		if ac.SupportedArtists[i].Name == name {
+			return true, ac.SupportedArtists[i].Mid
+		}
+	}
+
+	return false, ""
 }
 
 func ParseConfig(configLocation string) (ArtisteConfig, error) {

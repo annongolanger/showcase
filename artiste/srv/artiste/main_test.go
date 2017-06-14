@@ -1,12 +1,12 @@
 package main_test
 
 import (
+	"bytes"
+	"encoding/json"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"net/http"
 	"io/ioutil"
-	"encoding/json"
-	"bytes"
+	"net/http"
 )
 
 var _ = Describe("Artiste", func() {

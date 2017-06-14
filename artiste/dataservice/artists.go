@@ -1,17 +1,17 @@
 package dataservice
 
 import (
-	"github.com/go-kit/kit/endpoint"
 	"context"
-	"github.com/benwaine/artistprof/artiste/dataservice/config"
 	"errors"
+	"github.com/benwaine/artistprof/artiste/dataservice/config"
+	"github.com/go-kit/kit/endpoint"
 )
 
 var ErrNoConfiguredArtists = errors.New("No Configured Artists")
 
 type GetSupportedArtistsResponse struct {
 	Artists []Artist `json:"artists"`
-	Err     string `json:"err,omitempty"`
+	Err     string   `json:"err,omitempty"`
 }
 
 //go:generate counterfeiter . GetSupportedArtists

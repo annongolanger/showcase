@@ -1,13 +1,18 @@
 {
+  "MusicBrainzBaseUrl": "https://jsonblob.com/api",
+  "SongKickBaseUrl": "https://jsonblob.com/api",
   "SupportedArtists": [
     {
-      "Name": "Jimmy Eat World"
+      "Name": "Jimmy Eat World",
+      "Id" : "12345"
     },
     {
-      "Name": "Nirvana"
+      "Name": "Nirvana",
+      "Id" : "12345"
     },
     {
-      "Name": "New Found Glory"
+      "Name": "New Found Glory",
+      "Id" : "12345"
     }
   ]
 }

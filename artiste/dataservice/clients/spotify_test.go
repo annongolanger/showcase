@@ -11,16 +11,16 @@ var _ = Describe("Spotify", func() {
 
 	var client *SpotifyClient
 
-	BeforeEach(func(){
+	BeforeEach(func() {
 		client = &SpotifyClient{}
 	})
 
-	Describe("GetReleatedArtists", func(){
+	Describe("GetReleatedArtists", func() {
 
 		var artists []SpotifyRelatedArtist
 		var err error
 
-		BeforeEach(func(){
+		BeforeEach(func() {
 			Skip("Skipping Spotify")
 			artists, err = client.GetRelatedArtists("3Ayl7mCk0nScecqOzvNp6s")
 		})
@@ -29,7 +29,7 @@ var _ = Describe("Spotify", func() {
 			Expect(err).NotTo(HaveOccurred())
 		})
 
-		It("should return related artists", func(){
+		It("should return related artists", func() {
 			Expect(len(artists)).Should(BeNumerically(">", 1))
 		})
 

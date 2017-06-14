@@ -3,14 +3,14 @@ package dataservice_test
 import (
 	. "github.com/benwaine/artistprof/artiste/dataservice"
 
+	"bytes"
+	"errors"
+	"github.com/benwaine/artistprof/artiste/dataservice/clients"
+	"github.com/benwaine/artistprof/artiste/dataservice/dataservicefakes"
+	"github.com/go-kit/kit/endpoint"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/go-kit/kit/endpoint"
-	"github.com/benwaine/artistprof/artiste/dataservice/dataservicefakes"
 	"net/http"
-	"bytes"
-	"github.com/benwaine/artistprof/artiste/dataservice/clients"
-	"errors"
 )
 
 var _ = Describe("Artist", func() {

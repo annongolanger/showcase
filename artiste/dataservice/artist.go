@@ -1,12 +1,12 @@
 package dataservice
 
 import (
-	"github.com/go-kit/kit/endpoint"
 	"context"
-	"net/http"
 	"encoding/json"
 	"errors"
 	"github.com/benwaine/artistprof/artiste/dataservice/clients"
+	"github.com/go-kit/kit/endpoint"
+	"net/http"
 )
 
 var ErrInvalidJSON = errors.New("Invalid Request JSON")
@@ -62,7 +62,7 @@ func (s *GetArtistService) GetArtistData(name string) (Artist, error) {
 	}
 
 	for i := range performances {
-		artistResponse.Performances[i] = ArtistPerformance{Name: performances[i].Name }
+		artistResponse.Performances[i] = ArtistPerformance{Name: performances[i].Name}
 	}
 
 	return artistResponse, nil
@@ -91,7 +91,7 @@ func MakeGetArtistEndpoint(service *GetArtistService) endpoint.Endpoint {
 			return GetArtistResponse{}, err
 		}
 
-		return GetArtistResponse{Artist: artist }, nil
+		return GetArtistResponse{Artist: artist}, nil
 	}
 }
 

@@ -1,13 +1,13 @@
 package dataservice_test
 
 import (
+	"errors"
 	"github.com/benwaine/artistprof/artiste/dataservice"
+	"github.com/benwaine/artistprof/artiste/dataservice/config"
+	"github.com/benwaine/artistprof/artiste/dataservice/dataservicefakes"
+	"github.com/go-kit/kit/endpoint"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/benwaine/artistprof/artiste/dataservice/config"
-	"github.com/go-kit/kit/endpoint"
-	"github.com/benwaine/artistprof/artiste/dataservice/dataservicefakes"
-	"errors"
 )
 
 var _ = Describe("ArtistService", func() {
@@ -53,8 +53,7 @@ var _ = Describe("ArtistService", func() {
 		Context("There are noconfigured artists", func() {
 
 			config := config.ArtisteConfig{
-				SupportedArtists: []config.ArtistConfig{
-				},
+				SupportedArtists: []config.ArtistConfig{},
 			}
 
 			artistService = dataservice.SupportedArtistsService{
@@ -94,7 +93,7 @@ var _ = Describe("Artist Endpoint", func() {
 			Context("When artists are returned with no error", func() {
 
 				BeforeEach(func() {
-					artists := []dataservice.Artist{{Name: "Test Test", }}
+					artists := []dataservice.Artist{{Name: "Test Test"}}
 					service.GetSupportedArtistsReturns(artists, nil)
 					response, err = getSupportedArtistsEndpoint(&ctx, nil)
 				})

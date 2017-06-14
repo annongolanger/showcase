@@ -1,21 +1,21 @@
 package clients
 
 import (
-	"net/http"
-	"fmt"
 	"encoding/json"
 	"errors"
+	"fmt"
+	"net/http"
 )
 
-type MusicbrainzClient struct{
+type MusicbrainzClient struct {
 	Client http.Client
 }
 
-type Artist struct{
+type Artist struct {
 	Name string `json:"name"`
 }
 
-func(mc *MusicbrainzClient) GetArtist(artistId string) (Artist, error) {
+func (mc *MusicbrainzClient) GetArtist(artistId string) (Artist, error) {
 
 	resp, err := mc.Client.Get(fmt.Sprintf("http://musicbrainz.org/ws/2/artist/%s?inc=aliases+releases&fmt=json", artistId))
 
