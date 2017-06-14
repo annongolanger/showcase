@@ -1,0 +1,877 @@
+{
+  "request": {
+    "path": "/musicbrainz/ws/2/artist/6acb932e-840d-47ac-8e0d-725ad8a6e52c",
+    "method": "get"
+  },
+  "response": {
+    "status": 200,
+    "data": {
+      "begin_area": {
+        "sort-name": "Coral Springs",
+        "name": "Coral Springs",
+        "id": "020d6a9a-c8f2-42f2-9a7f-8aff8521ae61",
+        "disambiguation": ""
+      },
+      "country": "US",
+      "gender": null,
+      "life-span": {
+        "begin": "1997",
+        "ended": false,
+        "end": null
+      },
+      "disambiguation": "",
+      "aliases": [
+        {
+          "type-id": null,
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "name": "A New Found Glory",
+          "begin": null,
+          "ended": false,
+          "sort-name": "A New Found Glory",
+          "end": null
+        },
+        {
+          "begin": null,
+          "name": "A Newfound Glory",
+          "ended": false,
+          "end": null,
+          "sort-name": "A Newfound Glory",
+          "type-id": null,
+          "locale": null,
+          "type": null,
+          "primary": null
+        },
+        {
+          "begin": null,
+          "name": "NFG",
+          "ended": false,
+          "end": null,
+          "sort-name": "NFG",
+          "type-id": null,
+          "type": null,
+          "locale": null,
+          "primary": null
+        },
+        {
+          "primary": null,
+          "type-id": null,
+          "type": null,
+          "locale": null,
+          "end": null,
+          "sort-name": "Newfound Glory",
+          "name": "Newfound Glory",
+          "begin": null,
+          "ended": false
+        }
+      ],
+      "end_area": null,
+      "sort-name": "New Found Glory",
+      "ipis": [],
+      "gender-id": null,
+      "releases": [
+        {
+          "title": "Sticks and Stones",
+          "id": "0228185c-e98d-4601-89fb-bf09fdffa71a",
+          "country": "US",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "aliases": [],
+          "disambiguation": "",
+          "quality": "normal",
+          "status": "Official",
+          "date": "2002-06-11",
+          "barcode": "008811291624",
+          "release-events": [
+            {
+              "date": "2002-06-11",
+              "area": {
+                "sort-name": "United States",
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "name": "United States",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "disambiguation": ""
+              }
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": null,
+          "packaging": null
+        },
+        {
+          "country": "US",
+          "id": "069f9f1f-cba6-4fac-8aa6-866cb50eca2c",
+          "title": "All Downhill From Here",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "quality": "normal",
+          "date": "2004-03-25",
+          "status": "Promotion",
+          "disambiguation": "",
+          "aliases": [],
+          "status-id": "518ffc83-5cde-34df-8627-81bff5093d92",
+          "barcode": null,
+          "release-events": [
+            {
+              "area": {
+                "sort-name": "United States",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "name": "United States",
+                "disambiguation": "",
+                "iso-3166-1-codes": [
+                  "US"
+                ]
+              },
+              "date": "2004-03-25"
+            }
+          ],
+          "packaging": null,
+          "packaging-id": null
+        },
+        {
+          "barcode": "602517077508",
+          "release-events": [
+            {
+              "date": "2006-09-19",
+              "area": {
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "name": "United States",
+                "disambiguation": "",
+                "sort-name": "United States"
+              }
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": null,
+          "packaging": null,
+          "disambiguation": "",
+          "aliases": [],
+          "quality": "normal",
+          "date": "2006-09-19",
+          "status": "Official",
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "title": "Coming Home",
+          "country": "US",
+          "id": "237e3adf-23ea-4fbb-88fa-38b20a84e6c1"
+        },
+        {
+          "release-events": [
+            {
+              "area": {
+                "sort-name": "United Kingdom",
+                "disambiguation": "",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "name": "United Kingdom",
+                "iso-3166-1-codes": [
+                  "GB"
+                ]
+              },
+              "date": "2002-06-17"
+            }
+          ],
+          "barcode": "008811297220",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+          "packaging": "Jewel Case",
+          "disambiguation": "",
+          "aliases": [],
+          "quality": "normal",
+          "date": "2002-06-17",
+          "status": "Official",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "Sticks and Stones",
+          "id": "261c20d5-6d03-4c16-a77f-7200920e0563",
+          "country": "GB"
+        },
+        {
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "From the Screen to Your Stereo",
+          "country": "US",
+          "id": "2b3d9bef-c686-4656-a19e-d46040af1db5",
+          "packaging-id": null,
+          "packaging": null,
+          "barcode": "060768360426",
+          "release-events": [
+            {
+              "date": "2000-03-28",
+              "area": {
+                "sort-name": "United States",
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "disambiguation": "",
+                "name": "United States",
+                "id": "489ce91b-6658-3307-9877-795b68554c98"
+              }
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "aliases": [],
+          "disambiguation": "",
+          "quality": "normal",
+          "status": "Official",
+          "date": "2000-03-28"
+        },
+        {
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "title": "This Disaster: live in London",
+          "id": "2fe0582b-5de0-4a23-ade0-3d2da6ccc892",
+          "country": "US",
+          "release-events": [
+            {
+              "area": {
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "name": "United States",
+                "disambiguation": "",
+                "sort-name": "United States"
+              },
+              "date": "2004-11-23"
+            }
+          ],
+          "barcode": null,
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": "bb14bb17-e8ad-375f-a3c6-b1f82fd2bcc4",
+          "packaging": "Keep Case",
+          "aliases": [],
+          "disambiguation": "",
+          "date": "2004-11-23",
+          "quality": "normal",
+          "status": "Official"
+        },
+        {
+          "packaging-id": null,
+          "packaging": null,
+          "release-events": [
+            {
+              "date": "2006-09-18",
+              "area": null
+            }
+          ],
+          "barcode": null,
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "aliases": [],
+          "disambiguation": "",
+          "quality": "normal",
+          "status": "Official",
+          "date": "2006-09-18",
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "title": "Coming Home",
+          "id": "37adfe5b-8041-4bf7-bab4-877da06c197e",
+          "country": null
+        },
+        {
+          "aliases": [],
+          "disambiguation": "",
+          "status": "Official",
+          "quality": "normal",
+          "date": "2001",
+          "packaging-id": null,
+          "packaging": null,
+          "barcode": "008811275822",
+          "release-events": [
+            {
+              "area": {
+                "name": "United Kingdom",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "disambiguation": "",
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "sort-name": "United Kingdom"
+              },
+              "date": "2001"
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "title": "New Found Glory",
+          "country": "GB",
+          "id": "3dca0597-41ea-4e38-9e4e-34c6e3834a43",
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          }
+        },
+        {
+          "packaging-id": null,
+          "packaging": null,
+          "release-events": [
+            {
+              "date": "1999-10-19",
+              "area": {
+                "sort-name": "United States",
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "name": "United States",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "disambiguation": ""
+              }
+            }
+          ],
+          "barcode": null,
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "aliases": [],
+          "disambiguation": "",
+          "quality": "normal",
+          "status": "Official",
+          "date": "1999-10-19",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "Nothing Gold Can Stay",
+          "country": "US",
+          "id": "45c3e101-0372-48af-806f-7c254ef9b292"
+        },
+        {
+          "aliases": [],
+          "disambiguation": "",
+          "date": "2005",
+          "quality": "normal",
+          "status": "Promotion",
+          "packaging-id": null,
+          "packaging": null,
+          "release-events": [
+            {
+              "area": {
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "name": "United Kingdom",
+                "disambiguation": "",
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "sort-name": "United Kingdom"
+              },
+              "date": "2005"
+            }
+          ],
+          "barcode": null,
+          "status-id": "518ffc83-5cde-34df-8627-81bff5093d92",
+          "title": "I Don't Wanna Know",
+          "country": "GB",
+          "id": "48d95950-974b-4bab-aa1b-944294381334",
+          "text-representation": {
+            "language": null,
+            "script": "Latn"
+          }
+        },
+        {
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "release-events": [
+            {
+              "area": null,
+              "date": "1997"
+            }
+          ],
+          "barcode": null,
+          "packaging": null,
+          "packaging-id": null,
+          "quality": "normal",
+          "status": "Official",
+          "date": "1997",
+          "disambiguation": "",
+          "aliases": [],
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "id": "5ff8a845-23d8-4f96-8cb1-5d7cc53b0773",
+          "country": null,
+          "title": "It's All About the Girls"
+        },
+        {
+          "aliases": [],
+          "disambiguation": "",
+          "status": "Official",
+          "quality": "normal",
+          "date": "2002-08-21",
+          "packaging-id": null,
+          "packaging": null,
+          "barcode": null,
+          "release-events": [
+            {
+              "area": {
+                "sort-name": "Japan",
+                "name": "Japan",
+                "id": "2db42837-c832-3c27-b4a3-08198f75693c",
+                "disambiguation": "",
+                "iso-3166-1-codes": [
+                  "JP"
+                ]
+              },
+              "date": "2002-08-21"
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "title": "Movie Addiction",
+          "id": "63a57520-713b-4438-a7ad-167ed50c40cd",
+          "country": "JP",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          }
+        },
+        {
+          "packaging-id": null,
+          "packaging": null,
+          "barcode": "602498624401",
+          "release-events": [
+            {
+              "area": {
+                "sort-name": "United Kingdom",
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "name": "United Kingdom",
+                "disambiguation": ""
+              },
+              "date": "2004-05-18"
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "disambiguation": "",
+          "aliases": [],
+          "quality": "normal",
+          "date": "2004-05-18",
+          "status": "Official",
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "title": "Catalyst",
+          "country": "GB",
+          "id": "65acf553-414e-4214-84da-d9333912d3c6"
+        },
+        {
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "All Downhill From Here",
+          "id": "6f3c1ba3-ad24-3325-81bb-782c2aa12f09",
+          "country": "GB",
+          "release-events": [
+            {
+              "date": "2004",
+              "area": {
+                "sort-name": "United Kingdom",
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "name": "United Kingdom",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "disambiguation": ""
+              }
+            }
+          ],
+          "barcode": null,
+          "status-id": "518ffc83-5cde-34df-8627-81bff5093d92",
+          "packaging-id": null,
+          "packaging": null,
+          "aliases": [],
+          "disambiguation": "",
+          "status": "Promotion",
+          "quality": "normal",
+          "date": "2004"
+        },
+        {
+          "release-events": [
+            {
+              "date": "2004-05-18",
+              "area": {
+                "disambiguation": "",
+                "name": "United States",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "sort-name": "United States"
+              }
+            }
+          ],
+          "barcode": "602498621424",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": null,
+          "packaging": null,
+          "aliases": [],
+          "disambiguation": "",
+          "quality": "normal",
+          "status": "Official",
+          "date": "2004-05-18",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "Catalyst",
+          "country": "US",
+          "id": "841ec76f-f536-468d-b8ab-069923b4db17"
+        },
+        {
+          "packaging-id": null,
+          "packaging": null,
+          "barcode": "602498634677",
+          "release-events": [
+            {
+              "area": {
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "name": "United States",
+                "disambiguation": "",
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "sort-name": "United States"
+              },
+              "date": "2004-08-17"
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "aliases": [],
+          "disambiguation": "",
+          "quality": "normal",
+          "date": "2004-08-17",
+          "status": "Official",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "Truth of My Youth",
+          "id": "8822976c-f36b-4341-9436-0c65488589c1",
+          "country": "US"
+        },
+        {
+          "title": "Catalyst",
+          "country": "JP",
+          "id": "905d99ca-1f96-4d77-8b5b-06cbd46e6c6c",
+          "text-representation": {
+            "language": null,
+            "script": null
+          },
+          "disambiguation": "",
+          "aliases": [],
+          "date": "2004-05-18",
+          "quality": "normal",
+          "status": "Official",
+          "barcode": "4988005363824",
+          "release-events": [
+            {
+              "date": "2004-05-18",
+              "area": {
+                "iso-3166-1-codes": [
+                  "JP"
+                ],
+                "disambiguation": "",
+                "id": "2db42837-c832-3c27-b4a3-08198f75693c",
+                "name": "Japan",
+                "sort-name": "Japan"
+              }
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+          "packaging": "Jewel Case"
+        },
+        {
+          "country": "US",
+          "id": "9c7585fb-e8ec-408f-a175-ff046ab1b587",
+          "title": "New Found Glory",
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "date": "2000-09-26",
+          "quality": "normal",
+          "status": "Official",
+          "aliases": [],
+          "disambiguation": "",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "barcode": "008811233822",
+          "release-events": [
+            {
+              "area": {
+                "disambiguation": "",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "name": "United States",
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "sort-name": "United States"
+              },
+              "date": "2000-09-26"
+            }
+          ],
+          "packaging": null,
+          "packaging-id": null
+        },
+        {
+          "title": "Nothing Gold Can Stay",
+          "id": "add1511c-8f81-382f-a74e-6616ad8349d4",
+          "country": "US",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "aliases": [],
+          "disambiguation": "",
+          "date": "1999",
+          "quality": "normal",
+          "status": "Official",
+          "packaging-id": null,
+          "packaging": null,
+          "release-events": [
+            {
+              "date": "1999",
+              "area": {
+                "disambiguation": "",
+                "name": "United States",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "sort-name": "United States"
+              }
+            }
+          ],
+          "barcode": null,
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe"
+        },
+        {
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "release-events": [
+            {
+              "area": {
+                "sort-name": "United States",
+                "disambiguation": "",
+                "name": "United States",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "iso-3166-1-codes": [
+                  "US"
+                ]
+              },
+              "date": "2006-09-18"
+            }
+          ],
+          "barcode": null,
+          "packaging": null,
+          "packaging-id": null,
+          "date": "2006-09-18",
+          "quality": "normal",
+          "status": "Official",
+          "aliases": [],
+          "disambiguation": "",
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "country": "US",
+          "id": "bb3f60de-b134-42f8-a298-a4b57913da12",
+          "title": "Coming Home"
+        },
+        {
+          "id": "e18567cf-fd43-411c-a4ea-307a2ed5b71f",
+          "country": "GB",
+          "title": "Hit Or Miss (Waited Too Long)",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "quality": "normal",
+          "status": "Official",
+          "date": "2001-08-21",
+          "aliases": [],
+          "disambiguation": "",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "release-events": [
+            {
+              "area": {
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "name": "United Kingdom",
+                "disambiguation": "",
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "sort-name": "United Kingdom"
+              },
+              "date": "2001-08-21"
+            }
+          ],
+          "barcode": "008815582322",
+          "packaging": "Jewel Case",
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a"
+        },
+        {
+          "quality": "normal",
+          "status": "Official",
+          "date": "1999-10-19",
+          "aliases": [],
+          "disambiguation": "",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "release-events": [
+            {
+              "date": "1999-10-19",
+              "area": {
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "disambiguation": "",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "name": "United States",
+                "sort-name": "United States"
+              }
+            }
+          ],
+          "barcode": "008811211424",
+          "packaging": null,
+          "packaging-id": null,
+          "id": "e33e5d23-b8dc-3aad-bdd2-3f62e091746a",
+          "country": "US",
+          "title": "Nothing Gold Can Stay",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          }
+        },
+        {
+          "packaging": null,
+          "packaging-id": null,
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "barcode": "008811294526",
+          "release-events": [
+            {
+              "area": {
+                "sort-name": "United Kingdom",
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "disambiguation": "",
+                "name": "United Kingdom",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed"
+              },
+              "date": "2002"
+            }
+          ],
+          "quality": "normal",
+          "status": "Official",
+          "date": "2002",
+          "disambiguation": "",
+          "aliases": [],
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "id": "e4aa534e-7593-4332-abee-472bd7c4f078",
+          "country": "GB",
+          "title": "Sticks and Stones"
+        },
+        {
+          "barcode": "0602498624333",
+          "release-events": [
+            {
+              "date": "2004",
+              "area": {
+                "iso-3166-1-codes": [
+                  "AU"
+                ],
+                "disambiguation": "",
+                "id": "106e0bec-b638-3b37-b731-f53d507dc00e",
+                "name": "Australia",
+                "sort-name": "Australia"
+              }
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": null,
+          "packaging": null,
+          "disambiguation": "",
+          "aliases": [],
+          "date": "2004",
+          "quality": "normal",
+          "status": "Official",
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "title": "Catalyst",
+          "id": "ece7ea2d-c3b2-41ee-a688-97d241c34b8e",
+          "country": "AU"
+        },
+        {
+          "barcode": "008811233822",
+          "release-events": [
+            {
+              "area": {
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "name": "United Kingdom",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "disambiguation": "",
+                "sort-name": "United Kingdom"
+              },
+              "date": "2001-10-01"
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": null,
+          "packaging": null,
+          "aliases": [],
+          "disambiguation": "",
+          "date": "2001-10-01",
+          "quality": "normal",
+          "status": "Official",
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "title": "New Found Glory",
+          "country": "GB",
+          "id": "fb947a65-a204-337b-b57a-8ea498caff1d"
+        }
+      ],
+      "id": "6acb932e-840d-47ac-8e0d-725ad8a6e52c",
+      "name": "New Found Glory",
+      "area": {
+        "iso-3166-1-codes": [
+          "US"
+        ],
+        "name": "United States",
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "disambiguation": "",
+        "sort-name": "United States"
+      },
+      "isnis": [
+        "000000011089339X"
+      ],
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b"
+    }
+  }
+}

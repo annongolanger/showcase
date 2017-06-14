@@ -1,6 +1,6 @@
 {
   "request": {
-    "path": "/songkick/api/3.0/artists/mbid:bbc5b66b-d037-4f26-aecf-0b129e7f876a",
+    "path": "/songkick/api/3.0/artists/mbid:f2eef649-a6d5-4114-afba-e50ab26254d2",
     "method": "get"
   },
   "response": {

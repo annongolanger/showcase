@@ -7,6 +7,7 @@ import (
 	"github.com/benwaine/artistprof/artiste/dataservice/clients"
 	"github.com/go-kit/kit/endpoint"
 	"net/http"
+	"log"
 )
 
 var ErrInvalidJSON = errors.New("Invalid Request JSON")
@@ -51,7 +52,7 @@ func (s *GetArtistService) GetArtistData(name string) (Artist, error) {
 	}
 
 	performances, err := s.PerformanceGetter.GetArtistPerformances(id)
-
+	log.Printf("Pers")
 	if err != nil {
 		return Artist{}, ErrArtistUnavailable
 	}

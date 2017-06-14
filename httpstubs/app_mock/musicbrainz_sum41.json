@@ -1,0 +1,895 @@
+{
+  "request": {
+    "path": "/musicbrainz/ws/2/artist/6acb932e-840d-47ac-8e0d-725ad8a6e52c",
+    "method": "get"
+  },
+  "response": {
+    "status": 200,
+    "data": {
+      "gender": null,
+      "life-span": {
+        "ended": false,
+        "begin": "1996",
+        "end": null
+      },
+      "aliases": [
+        {
+          "type-id": null,
+          "type": null,
+          "locale": null,
+          "primary": null,
+          "name": "Sum-41",
+          "begin": null,
+          "ended": false,
+          "end": null,
+          "sort-name": "Sum-41"
+        },
+        {
+          "primary": null,
+          "type-id": null,
+          "type": null,
+          "locale": null,
+          "sort-name": "Sum41",
+          "end": null,
+          "begin": null,
+          "name": "Sum41",
+          "ended": false
+        }
+      ],
+      "disambiguation": "",
+      "end_area": null,
+      "country": "CA",
+      "begin_area": {
+        "disambiguation": "",
+        "name": "Ajax",
+        "id": "595619e1-3cd4-467c-b79e-75ff9ed72d9b",
+        "sort-name": "Ajax"
+      },
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "isnis": [
+        "0000000122539531"
+      ],
+      "releases": [
+        {
+          "disambiguation": "",
+          "aliases": [],
+          "status": "Promotion",
+          "quality": "normal",
+          "date": "2000",
+          "barcode": null,
+          "release-events": [
+            {
+              "date": "2000",
+              "area": {
+                "sort-name": "United States",
+                "disambiguation": "",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "name": "United States",
+                "iso-3166-1-codes": [
+                  "US"
+                ]
+              }
+            }
+          ],
+          "status-id": "518ffc83-5cde-34df-8627-81bff5093d92",
+          "packaging-id": "f7101ce3-0384-39ce-9fde-fbbd0044d35f",
+          "packaging": "Cardboard/Paper Sleeve",
+          "title": "Toe Tapping Treats “Some Songs That Were Kicking Around”",
+          "country": "US",
+          "id": "0d07f878-e13d-4cb5-9b90-d4891c5b4491",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          }
+        },
+        {
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "title": "All Killer No Filler",
+          "id": "0e897deb-eb95-350a-9d28-248e1acac809",
+          "country": "DE",
+          "packaging-id": null,
+          "packaging": null,
+          "barcode": "731458649922",
+          "release-events": [
+            {
+              "date": "2001-10-08",
+              "area": {
+                "disambiguation": "",
+                "id": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+                "name": "Germany",
+                "iso-3166-1-codes": [
+                  "DE"
+                ],
+                "sort-name": "Germany"
+              }
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "disambiguation": "",
+          "aliases": [],
+          "status": "Official",
+          "quality": "normal",
+          "date": "2001-10-08"
+        },
+        {
+          "disambiguation": "",
+          "aliases": [],
+          "quality": "normal",
+          "status": "Promotion",
+          "date": "2001",
+          "release-events": [
+            {
+              "area": {
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "disambiguation": "",
+                "name": "United States",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "sort-name": "United States"
+              },
+              "date": "2001"
+            }
+          ],
+          "barcode": null,
+          "status-id": "518ffc83-5cde-34df-8627-81bff5093d92",
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+          "packaging": "Jewel Case",
+          "title": "Fat Lip",
+          "country": "US",
+          "id": "278f74b7-18d8-4b70-b471-5f0e7830e6c7",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          }
+        },
+        {
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+          "packaging": "Jewel Case",
+          "barcode": "044006354903",
+          "release-events": [
+            {
+              "date": "2002-11-25",
+              "area": {
+                "id": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+                "name": "Germany",
+                "disambiguation": "",
+                "iso-3166-1-codes": [
+                  "DE"
+                ],
+                "sort-name": "Germany"
+              }
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "aliases": [],
+          "disambiguation": "Limited Edition",
+          "date": "2002-11-25",
+          "quality": "normal",
+          "status": "Official",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "Does This Look Infected?",
+          "id": "29911ee4-301b-4192-924e-24db9e973227",
+          "country": "DE"
+        },
+        {
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "id": "3944abb0-dfb3-46b0-914c-a1117f568c7d",
+          "country": "CA",
+          "title": "All Killer No Filler",
+          "packaging": "Jewel Case",
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "release-events": [
+            {
+              "date": "2001-05-08",
+              "area": {
+                "iso-3166-1-codes": [
+                  "CA"
+                ],
+                "name": "Canada",
+                "id": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+                "disambiguation": "",
+                "sort-name": "Canada"
+              }
+            },
+            {
+              "date": "2001-05-08",
+              "area": {
+                "sort-name": "United States",
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "name": "United States",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "disambiguation": ""
+              }
+            }
+          ],
+          "barcode": "731454866224",
+          "quality": "normal",
+          "date": "2001-05-08",
+          "status": "Official",
+          "disambiguation": "",
+          "aliases": []
+        },
+        {
+          "barcode": "044006356020",
+          "release-events": [
+            {
+              "date": "2002-11-25",
+              "area": {
+                "sort-name": "Germany",
+                "iso-3166-1-codes": [
+                  "DE"
+                ],
+                "id": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+                "name": "Germany",
+                "disambiguation": ""
+              }
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+          "packaging": "Jewel Case",
+          "aliases": [],
+          "disambiguation": "",
+          "quality": "normal",
+          "date": "2002-11-25",
+          "status": "Official",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "Does This Look Infected?",
+          "id": "39d3cfb3-de44-48ee-b9aa-64220e29b825",
+          "country": "DE"
+        },
+        {
+          "title": "Fat Lip",
+          "country": "GB",
+          "id": "3d406fca-9a22-4e4d-89f7-f14636d2bf20",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "aliases": [],
+          "disambiguation": "",
+          "quality": "normal",
+          "status": "Official",
+          "date": "2001-10-15",
+          "packaging-id": null,
+          "packaging": null,
+          "release-events": [
+            {
+              "date": "2001-10-15",
+              "area": {
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "name": "United Kingdom",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "disambiguation": "",
+                "sort-name": "United Kingdom"
+              }
+            }
+          ],
+          "barcode": "731458880127",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe"
+        },
+        {
+          "aliases": [],
+          "disambiguation": "",
+          "quality": "normal",
+          "status": "Official",
+          "date": "2001-10-08",
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+          "packaging": "Jewel Case",
+          "release-events": [
+            {
+              "area": {
+                "iso-3166-1-codes": [
+                  "DE"
+                ],
+                "name": "Germany",
+                "id": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+                "disambiguation": "",
+                "sort-name": "Germany"
+              },
+              "date": "2001-10-08"
+            }
+          ],
+          "barcode": "731454866224",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "title": "All Killer No Filler",
+          "country": "DE",
+          "id": "45ff9b87-d082-4999-a40c-7d30ece49c35",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          }
+        },
+        {
+          "date": "2002-03-25",
+          "quality": "normal",
+          "status": "Official",
+          "aliases": [],
+          "disambiguation": "",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "release-events": [
+            {
+              "date": "2002-03-25",
+              "area": {
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "name": "United Kingdom",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "disambiguation": "",
+                "sort-name": "United Kingdom"
+              }
+            }
+          ],
+          "barcode": null,
+          "packaging": null,
+          "packaging-id": null,
+          "country": "GB",
+          "id": "47b90ca7-7916-4982-af56-7fef1d94d08f",
+          "title": "Motivation",
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          }
+        },
+        {
+          "barcode": "",
+          "release-events": [
+            {
+              "area": {
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "disambiguation": "",
+                "name": "United States",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "sort-name": "United States"
+              },
+              "date": "2001-05-08"
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+          "packaging": "Jewel Case",
+          "aliases": [],
+          "disambiguation": "BMG club edition",
+          "quality": "normal",
+          "status": "Official",
+          "date": "2001-05-08",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "All Killer No Filler",
+          "id": "4ad70810-0d53-4059-98cf-a92778a018bc",
+          "country": "US"
+        },
+        {
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+          "packaging": "Jewel Case",
+          "barcode": "4988005302076",
+          "release-events": [
+            {
+              "area": {
+                "disambiguation": "",
+                "id": "2db42837-c832-3c27-b4a3-08198f75693c",
+                "name": "Japan",
+                "iso-3166-1-codes": [
+                  "JP"
+                ],
+                "sort-name": "Japan"
+              },
+              "date": "2002-05-22"
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "aliases": [],
+          "disambiguation": "",
+          "status": "Official",
+          "quality": "normal",
+          "date": "2002-05-22",
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "title": "Half Hour of Power",
+          "country": "JP",
+          "id": "505004f7-8120-450c-86f0-d629246b282d"
+        },
+        {
+          "packaging-id": null,
+          "packaging": null,
+          "release-events": [
+            {
+              "area": {
+                "sort-name": "United Kingdom",
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "disambiguation": "",
+                "name": "United Kingdom",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed"
+              },
+              "date": "2002-03-12"
+            }
+          ],
+          "barcode": null,
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "aliases": [],
+          "disambiguation": "",
+          "status": "Official",
+          "quality": "normal",
+          "date": "2002-03-12",
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "title": "Motivation",
+          "id": "5358bd23-ec07-49e4-a54e-4c1165bb25a8",
+          "country": "GB"
+        },
+        {
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "Does This Look Infected?",
+          "country": "PL",
+          "id": "58278ab4-893e-32f7-91c7-10312fa47b92",
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+          "packaging": "Jewel Case",
+          "barcode": "044006356129",
+          "release-events": [
+            {
+              "area": {
+                "sort-name": "Poland",
+                "iso-3166-1-codes": [
+                  "PL"
+                ],
+                "name": "Poland",
+                "id": "dd7f80c8-f017-3d01-8608-2a8c9c32b954",
+                "disambiguation": ""
+              },
+              "date": "2002-11-25"
+            },
+            {
+              "date": "2002-11-25",
+              "area": {
+                "sort-name": "United Kingdom",
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "name": "United Kingdom",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "disambiguation": ""
+              }
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "disambiguation": "",
+          "aliases": [],
+          "quality": "normal",
+          "status": "Official",
+          "date": "2002-11-25"
+        },
+        {
+          "aliases": [],
+          "disambiguation": "",
+          "status": "Official",
+          "quality": "normal",
+          "date": "2002-11-18",
+          "release-events": [
+            {
+              "date": "2002-11-18",
+              "area": {
+                "sort-name": "United Kingdom",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "name": "United Kingdom",
+                "disambiguation": "",
+                "iso-3166-1-codes": [
+                  "GB"
+                ]
+              }
+            }
+          ],
+          "barcode": null,
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": null,
+          "packaging": null,
+          "title": "Still Waiting (disc 1)",
+          "id": "607495d5-fc90-45e3-9d9f-e631b4f32269",
+          "country": "GB",
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          }
+        },
+        {
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "In Too Deep",
+          "country": "GB",
+          "id": "66d8f8dc-9156-44a9-9deb-96052a1f512d",
+          "barcode": "731458889823",
+          "release-events": [
+            {
+              "area": {
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "disambiguation": "",
+                "name": "United Kingdom",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "sort-name": "United Kingdom"
+              },
+              "date": "2001-12-03"
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": "36327bc2-f691-3d66-80e5-bd03cec6060a",
+          "packaging": "Slim Jewel Case",
+          "aliases": [],
+          "disambiguation": "",
+          "date": "2001-12-03",
+          "quality": "normal",
+          "status": "Official"
+        },
+        {
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "id": "6a7d6779-7337-4ae4-90ab-0c5f4f1bb26e",
+          "country": "GB",
+          "title": "All Killer No Filler",
+          "packaging": "Jewel Case",
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "barcode": "731458649922",
+          "release-events": [
+            {
+              "date": "2001-10-08",
+              "area": {
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "name": "United Kingdom",
+                "disambiguation": "",
+                "sort-name": "United Kingdom"
+              }
+            }
+          ],
+          "quality": "normal",
+          "status": "Official",
+          "date": "2001-10-08",
+          "aliases": [],
+          "disambiguation": ""
+        },
+        {
+          "packaging": null,
+          "packaging-id": null,
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "release-events": [
+            {
+              "date": "2002-11-18",
+              "area": {
+                "disambiguation": "",
+                "name": "United Kingdom",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "sort-name": "United Kingdom"
+              }
+            }
+          ],
+          "barcode": null,
+          "quality": "normal",
+          "date": "2002-11-18",
+          "status": "Official",
+          "disambiguation": "",
+          "aliases": [],
+          "text-representation": {
+            "script": "Latn",
+            "language": "eng"
+          },
+          "country": "GB",
+          "id": "8cec99aa-f4bc-4d43-9817-0a66dc375615",
+          "title": "Still Waiting (disc 2)"
+        },
+        {
+          "packaging": null,
+          "packaging-id": null,
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "barcode": "",
+          "release-events": [
+            {
+              "date": "2002-11-26",
+              "area": {
+                "disambiguation": "",
+                "name": "United States",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "sort-name": "United States"
+              }
+            }
+          ],
+          "date": "2002-11-26",
+          "quality": "normal",
+          "status": "Official",
+          "aliases": [],
+          "disambiguation": "BMG club edition",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "id": "97128b9e-8a57-42f0-b270-96c371c7d248",
+          "country": "US",
+          "title": "Does This Look Infected?"
+        },
+        {
+          "title": "It's What We're All About",
+          "id": "a4fc693d-4247-44ef-af38-e7681be9d932",
+          "country": "GB",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "disambiguation": "",
+          "aliases": [],
+          "quality": "normal",
+          "date": "2002-06-17",
+          "status": "Official",
+          "packaging-id": null,
+          "packaging": null,
+          "release-events": [
+            {
+              "area": {
+                "disambiguation": "",
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "name": "United Kingdom",
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "sort-name": "United Kingdom"
+              },
+              "date": "2002-06-17"
+            }
+          ],
+          "barcode": "5099767286425",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe"
+        },
+        {
+          "packaging": null,
+          "packaging-id": null,
+          "status-id": "518ffc83-5cde-34df-8627-81bff5093d92",
+          "release-events": [
+            {
+              "area": {
+                "sort-name": "France",
+                "disambiguation": "",
+                "name": "France",
+                "id": "08310658-51eb-3801-80de-5a0739207115",
+                "iso-3166-1-codes": [
+                  "FR"
+                ]
+              },
+              "date": "2001"
+            }
+          ],
+          "barcode": null,
+          "status": "Promotion",
+          "quality": "normal",
+          "date": "2001",
+          "aliases": [],
+          "disambiguation": "",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "country": "FR",
+          "id": "a7367f23-e75b-4567-af94-40fc1f2a8a53",
+          "title": "Fat Lip"
+        },
+        {
+          "packaging": "Cassette Case",
+          "packaging-id": "c70b737a-0114-39a9-88f7-82843e54f906",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "barcode": null,
+          "release-events": [
+            {
+              "date": "1998",
+              "area": {
+                "id": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+                "name": "Canada",
+                "disambiguation": "",
+                "iso-3166-1-codes": [
+                  "CA"
+                ],
+                "sort-name": "Canada"
+              }
+            }
+          ],
+          "quality": "normal",
+          "status": "Official",
+          "date": "1998",
+          "aliases": [],
+          "disambiguation": "",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "country": "CA",
+          "id": "b0885edf-2654-4fef-89d4-e456a70fbcab",
+          "title": "1998 Demo"
+        },
+        {
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+          "packaging": "Jewel Case",
+          "barcode": "731454241922",
+          "release-events": [
+            {
+              "date": "2000-06-27",
+              "area": {
+                "iso-3166-1-codes": [
+                  "US"
+                ],
+                "disambiguation": "",
+                "id": "489ce91b-6658-3307-9877-795b68554c98",
+                "name": "United States",
+                "sort-name": "United States"
+              }
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "aliases": [],
+          "disambiguation": "",
+          "date": "2000-06-27",
+          "quality": "normal",
+          "status": "Official",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "Half Hour of Power",
+          "country": "US",
+          "id": "cba36543-29ff-472a-baaa-1e637232c1a8"
+        },
+        {
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "title": "Half Hour of Power",
+          "id": "e089d8d8-2a1c-461a-a8a5-0d4faf126df7",
+          "country": "CA",
+          "barcode": "060270058927",
+          "release-events": [
+            {
+              "date": "2000-06-27",
+              "area": {
+                "iso-3166-1-codes": [
+                  "CA"
+                ],
+                "disambiguation": "",
+                "id": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+                "name": "Canada",
+                "sort-name": "Canada"
+              }
+            }
+          ],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": null,
+          "packaging": null,
+          "disambiguation": "",
+          "aliases": [],
+          "quality": "normal",
+          "status": "Official",
+          "date": "2000-06-27"
+        },
+        {
+          "disambiguation": "",
+          "aliases": [],
+          "quality": "normal",
+          "status": "Official",
+          "date": "2002-11-25",
+          "release-events": [
+            {
+              "date": "2002-11-25",
+              "area": {
+                "iso-3166-1-codes": [
+                  "GB"
+                ],
+                "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                "name": "United Kingdom",
+                "disambiguation": "",
+                "sort-name": "United Kingdom"
+              }
+            }
+          ],
+          "barcode": "044006355900",
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "packaging-id": null,
+          "packaging": null,
+          "title": "Does This Look Infected?",
+          "id": "e8c2ad28-2afc-470a-9733-d0867d196947",
+          "country": "GB",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          }
+        },
+        {
+          "id": "ff025142-3d06-3a39-bf55-0655c52b9883",
+          "country": "XE",
+          "title": "Half Hour of Power",
+          "text-representation": {
+            "language": "eng",
+            "script": "Latn"
+          },
+          "status": "Official",
+          "quality": "normal",
+          "date": "2000-06-27",
+          "disambiguation": "",
+          "aliases": [],
+          "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+          "release-events": [
+            {
+              "date": "2000-06-27",
+              "area": {
+                "sort-name": "Europe",
+                "iso-3166-1-codes": [
+                  "XE"
+                ],
+                "id": "89a675c2-3e37-3518-b83c-418bad59a85a",
+                "name": "Europe",
+                "disambiguation": ""
+              }
+            }
+          ],
+          "barcode": "731454241922",
+          "packaging": "Jewel Case",
+          "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a"
+        }
+      ],
+      "id": "f2eef649-a6d5-4114-afba-e50ab26254d2",
+      "name": "Sum 41",
+      "area": {
+        "disambiguation": "",
+        "id": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+        "name": "Canada",
+        "iso-3166-1-codes": [
+          "CA"
+        ],
+        "sort-name": "Canada"
+      },
+      "sort-name": "Sum 41",
+      "gender-id": null,
+      "ipis": []
+    }
+  }
+}

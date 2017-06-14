@@ -4,15 +4,15 @@
   "SupportedArtists": [
     {
       "Name": "Jimmy Eat World",
-      "Id" : "bbc5b66b-d037-4f26-aecf-0b129e7f876a"
+      "Mid" : "bbc5b66b-d037-4f26-aecf-0b129e7f876a"
     },
     {
-      "Name": "Nirvana",
-      "Id" : "12345"
+      "Name": "Sum 41",
+      "Mid" : "f2eef649-a6d5-4114-afba-e50ab26254d2"
     },
     {
       "Name": "New Found Glory",
-      "Id" : "12345"
+      "Mid" : "6acb932e-840d-47ac-8e0d-725ad8a6e52c"
     }
   ]
 }

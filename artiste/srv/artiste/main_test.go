@@ -73,7 +73,7 @@ var _ = Describe("Artiste", func() {
 			Expect(err).NotTo(HaveOccurred())
 			Expect(parsedResp.Artists).To(HaveLen(3))
 			Expect(parsedResp.Artists[0].Name).To(Equal("Jimmy Eat World"))
-			Expect(parsedResp.Artists[1].Name).To(Equal("Nirvana"))
+			Expect(parsedResp.Artists[1].Name).To(Equal("Sum 41"))
 			Expect(parsedResp.Artists[2].Name).To(Equal("New Found Glory"))
 		})
 	})
