@@ -10,6 +10,7 @@ import (
 
 type ArtistConfig struct {
 	Name string
+	Mid string
 }
 
 type ArtisteConfig struct {

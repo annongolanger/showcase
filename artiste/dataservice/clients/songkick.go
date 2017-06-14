@@ -27,33 +27,33 @@ type event struct {
 	DisplayName string `json:"displayName"`
 }
 
-type SongKickEvent struct {
+type PerformanceEvent struct {
 	Name string
 }
 
-func (sc SongKickClient) GetArtistPerformances(artistId string) ([]SongKickEvent, error) {
+func (sc SongKickClient) GetArtistPerformances(artistId string) ([]PerformanceEvent, error) {
 
 	response, err := sc.Client.Get(fmt.Sprintf("http://api.songkick.com/api/3.0/artists/mbid:%s/calendar.json", artistId))
 
 	if err != nil {
-		return []SongKickEvent{}, errors.New(fmt.Sprintf("Request Error: %s", err.Error()))
+		return []PerformanceEvent{}, errors.New(fmt.Sprintf("Request Error: %s", err.Error()))
 	}
 
 	if response.StatusCode != 200 {
-		return []SongKickEvent{}, errors.New("Request Error")
+		return []PerformanceEvent{}, errors.New("Request Error")
 	}
 
 	var results getPerformanceResponse
 	err = json.NewDecoder(response.Body).Decode(&results)
 
 	if err != nil {
-		return []SongKickEvent{}, errors.New(fmt.Sprintf("Parse Error %s", err.Error()))
+		return []PerformanceEvent{}, errors.New(fmt.Sprintf("Parse Error %s", err.Error()))
 	}
 
-	list := make([]SongKickEvent, len(results.ResultsPage.Event.Events))
+	list := make([]PerformanceEvent, len(results.ResultsPage.Event.Events))
 
 	for i := range results.ResultsPage.Event.Events {
-		list[i] = SongKickEvent{
+		list[i] = PerformanceEvent{
 			Name: results.ResultsPage.Event.Events[i].DisplayName,
 		}
 	}

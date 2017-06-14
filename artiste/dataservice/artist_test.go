@@ -9,26 +9,104 @@ import (
 	"github.com/benwaine/artistprof/artiste/dataservice/dataservicefakes"
 	"net/http"
 	"bytes"
+	"github.com/benwaine/artistprof/artiste/dataservice/clients"
+	"errors"
 )
 
 var _ = Describe("Artist", func() {
 
-	Describe("The Endpoint", func() {
+	Describe("The Endpoint uses the service to get artist data", func() {
 
 		var endpoint endpoint.Endpoint
+		var fakeArtistGetter *dataservicefakes.FakeArtistGetter
+		var fakePerformanceGetter *dataservicefakes.FakeArtistPerformanceGetter
+		var fakeSupported *dataservicefakes.FakeSupported
+		var getArtistSrv *GetArtistService
 		var response interface{}
 		var request GetArtistRequest
 		var err error
+		var ctx dataservicefakes.FakeContext
 
 		BeforeEach(func() {
-			endpoint = MakeGetArtistEndpoint()
+
+			fakeArtistGetter = &dataservicefakes.FakeArtistGetter{}
+			fakePerformanceGetter = &dataservicefakes.FakeArtistPerformanceGetter{}
+			fakeSupported = &dataservicefakes.FakeSupported{}
+
+			getArtistSrv = &GetArtistService{
+				ArtistGetter:      fakeArtistGetter,
+				PerformanceGetter: fakePerformanceGetter,
+				Config:            fakeSupported,
+			}
+
+			endpoint = MakeGetArtistEndpoint(getArtistSrv)
 			request = GetArtistRequest{}
-			ctx := dataservicefakes.FakeContext{}
-			response, err = endpoint(&ctx, request)
+			ctx = dataservicefakes.FakeContext{}
 		})
 
-		It("should not error", func() {
-			Expect(err).NotTo(HaveOccurred())
+		Context("A supported artist is requested", func() {
+
+			BeforeEach(func() {
+				fakeSupported.SupportedReturns(true, "123456789")
+			})
+
+			Context("Both Artist and Performance Data are returned", func() {
+
+				BeforeEach(func() {
+					fakeArtistGetter.GetArtistReturns(clients.Artist{Name: "Sting"}, nil)
+					fakePerformanceGetter.GetArtistPerformancesReturns([]clients.PerformanceEvent{{Name: "Live At The Paladium"}}, nil)
+					response, err = endpoint(&ctx, request)
+				})
+
+				It("should not error", func() {
+					Expect(err).NotTo(HaveOccurred())
+				})
+
+				It("Should return an artist with performance data", func() {
+					getArtistResponse := response.(GetArtistResponse)
+					Expect(getArtistResponse.Artist.Name).To(Equal("Sting"))
+					Expect(len(getArtistResponse.Artist.Performances)).To(BeNumerically("==", 1))
+					Expect(getArtistResponse.Artist.Performances[0].Name).To(Equal("Live At The Paladium"))
+				})
+			})
+
+			Context("Artist Data is not returned", func() {
+
+				BeforeEach(func() {
+					fakeArtistGetter.GetArtistReturns(clients.Artist{}, errors.New("An Error"))
+					fakePerformanceGetter.GetArtistPerformancesReturns([]clients.PerformanceEvent{{Name: "Live At The Paladium"}}, nil)
+					response, err = endpoint(&ctx, request)
+				})
+
+				It("should error", func() {
+					Expect(err).To(Equal(ErrArtistUnavailable))
+				})
+			})
+
+			Context("Performance Data is not returned", func() {
+
+				BeforeEach(func() {
+					fakeArtistGetter.GetArtistReturns(clients.Artist{Name: "Sting"}, nil)
+					fakePerformanceGetter.GetArtistPerformancesReturns([]clients.PerformanceEvent{}, ErrArtistUnavailable)
+					response, err = endpoint(&ctx, request)
+				})
+
+				It("should error", func() {
+					Expect(err).To(Equal(ErrArtistUnavailable))
+				})
+			})
+		})
+
+		Context("An unsupported artist is requested", func() {
+
+			BeforeEach(func() {
+				fakeSupported.SupportedReturns(false, "")
+				response, err = endpoint(&ctx, request)
+			})
+
+			It("should return an error", func() {
+				Expect(err).To(Equal(ErrArtistNotSupported))
+			})
 		})
 	})
 

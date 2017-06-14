@@ -11,24 +11,20 @@ var ErrNoConfiguredArtists = errors.New("No Configured Artists")
 
 type GetSupportedArtistsResponse struct {
 	Artists []Artist `json:"artists"`
-	Err string `json:"err,omitempty"`
-}
-
-type Artist struct {
-	Name string `json:"name"`
+	Err     string `json:"err,omitempty"`
 }
 
 //go:generate counterfeiter . GetSupportedArtists
-type GetSupportedArtists interface{
+type GetSupportedArtists interface {
 	GetSupportedArtists() ([]Artist, error)
 }
 
-type ArtistService struct {
+type SupportedArtistsService struct {
 	Config config.ArtisteConfig
 }
 
 // GetSupportedArtists returns the supported artists the API consumer can pass into GetArtist
-func(a ArtistService) GetSupportedArtists() ([]Artist, error) {
+func (a SupportedArtistsService) GetSupportedArtists() ([]Artist, error) {
 
 	if len(a.Config.SupportedArtists) < 1 {
 		return []Artist{}, ErrNoConfiguredArtists
@@ -43,12 +39,11 @@ func(a ArtistService) GetSupportedArtists() ([]Artist, error) {
 	}
 
 	return artists, nil
-
 }
 
 func MakeGetSupportedArtistsEndpoint(svc GetSupportedArtists) endpoint.Endpoint {
 
-	return func (ctx context.Context, request interface{}) (interface{}, error) {
+	return func(ctx context.Context, request interface{}) (interface{}, error) {
 
 		artists, err := svc.GetSupportedArtists()
 

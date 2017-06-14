@@ -11,28 +11,28 @@ type MusicbrainzClient struct{
 	Client http.Client
 }
 
-type MusicBrainsGetArtistResponse struct{
+type Artist struct{
 	Name string `json:"name"`
 }
 
-func(mc *MusicbrainzClient) GetArtist(artistId string) (MusicBrainsGetArtistResponse, error) {
+func(mc *MusicbrainzClient) GetArtist(artistId string) (Artist, error) {
 
 	resp, err := mc.Client.Get(fmt.Sprintf("http://musicbrainz.org/ws/2/artist/%s?inc=aliases+releases&fmt=json", artistId))
 
 	if err != nil {
-		return MusicBrainsGetArtistResponse{}, err
+		return Artist{}, err
 	}
 
 	if resp.StatusCode != 200 {
-		return MusicBrainsGetArtistResponse{}, errors.New(fmt.Sprintf("Request Error: %s", resp.StatusCode))
+		return Artist{}, errors.New(fmt.Sprintf("Request Error: %s", resp.StatusCode))
 	}
 
-	var artistResponse MusicBrainsGetArtistResponse
+	var artistResponse Artist
 
 	err = json.NewDecoder(resp.Body).Decode(&artistResponse)
 
 	if err != nil {
-		return MusicBrainsGetArtistResponse{}, errors.New(fmt.Sprintf("Parse Error: %s", err.Error()))
+		return Artist{}, errors.New(fmt.Sprintf("Parse Error: %s", err.Error()))
 	}
 
 	return artistResponse, nil

@@ -13,7 +13,7 @@ var _ = Describe("Songkick", func() {
 	Describe("GetArtistPerformances", func() {
 
 		var client SongKickClient
-		var response []SongKickEvent
+		var response []PerformanceEvent
 		var err error
 		var artistId = "5b11f4ce-a62d-471e-81fc-a69a8278c7da"
 

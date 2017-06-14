@@ -17,7 +17,7 @@ var _ = Describe("Musicbrainz", func() {
 
 	Describe("GetArtist", func() {
 
-		var resp MusicBrainsGetArtistResponse
+		var resp Artist
 		var err error
 
 		Context("A succesfull response is returned", func() {

@@ -14,7 +14,7 @@ var _ = Describe("ArtistService", func() {
 
 	Describe("The GetSubscribedArtists Method", func() {
 
-		var artistService dataservice.ArtistService
+		var artistService dataservice.SupportedArtistsService
 
 		Context("There are configured artists", func() {
 
@@ -29,7 +29,7 @@ var _ = Describe("ArtistService", func() {
 				},
 			}
 
-			artistService = dataservice.ArtistService{
+			artistService = dataservice.SupportedArtistsService{
 				Config: config,
 			}
 
@@ -57,7 +57,7 @@ var _ = Describe("ArtistService", func() {
 				},
 			}
 
-			artistService = dataservice.ArtistService{
+			artistService = dataservice.SupportedArtistsService{
 				Config: config,
 			}
 
