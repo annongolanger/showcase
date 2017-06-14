@@ -1,0 +1,12 @@
+package: github.com/benwaine/artiste
+import:
+- package: github.com/go-kit/kit
+  subpackages:
+  - endpoint
+  - transport/http
+testImport:
+- package: github.com/onsi/ginkgo
+- package: github.com/onsi/gomega
+  subpackages:
+  - gexec
+- package: gopkg.in/jarcoal/httpmock.v1
